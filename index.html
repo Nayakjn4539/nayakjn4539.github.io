@@ -125,11 +125,7 @@
                                 A project aimed at creating an automated Anki card generator that doesn't rely on AI. It's envisioned as a website where users can upload PDFs or images of specific documents and generate a .csv or .txt file, which can then be imported and studied using Anki.
                             </p>
                             <a href="creations.html" class="text-indigo-600 hover:text-indigo-800 font-medium text-sm">Learn More &rarr;</a>
-                            <button class="mt-4 bg-blue-600 text-white font-semibold py-2 px-4 rounded-full shadow-md hover:bg-blue-700 transition-colors duration-300 generate-title-btn" data-project-id="1">
-                                ✨ Suggest a Catchy Title
-                            </button>
-                            <p class="mt-2 text-sm text-gray-600 italic generated-title-output" id="generated-title-1"></p>
-                        </div>
+                            </div>
                     </div>
                     <!-- Project Card 2: YouTube Channel Vision -->
                     <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
@@ -140,11 +136,7 @@
                                   Document the whole UG journey i guess. Since i live in a hostel this seems a bit far fetched but will figure something out.
                             </p>
                             <a href="https://youtube.com/@gr3y_mask?si=Ns5y3HfZqgZAW9Om" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 font-medium text-sm">Watch Now &rarr;</a>
-                            <button class="mt-4 bg-blue-600 text-white font-semibold py-2 px-4 rounded-full shadow-md hover:bg-blue-700 transition-colors duration-300 generate-title-btn" data-project-id="2">
-                                ✨ Suggest a Catchy Title
-                            </button>
-                            <p class="mt-2 text-sm text-gray-600 italic generated-title-output" id="generated-title-2"></p>
-                        </div>
+                              </div>
                     </div>
                 </div>
                 <div class="text-center mt-12">
@@ -326,28 +318,6 @@
                     funFactOutput.textContent = fact;
                 });
             }
-
-            // 2. Suggest Catchy Project Title
-            const generateTitleButtons = document.querySelectorAll('.generate-title-btn');
-
-            generateTitleButtons.forEach(button => {
-                button.addEventListener('click', async (event) => {
-                    const projectId = event.target.dataset.projectId;
-                    // Note: project-desc-1 (AnkiScan) is now on creations.html, so this will only work for existing projects on index.html
-                    const projectDescElement = document.getElementById(`project-desc-${projectId}`);
-                    const projectTitleElement = document.getElementById(`project-title-${projectId}`);
-                    const generatedTitleOutput = document.getElementById(`generated-title-${projectId}`);
-
-                    if (projectDescElement && projectTitleElement && generatedTitleOutput) {
-                        generatedTitleOutput.textContent = 'Suggesting title...';
-                        const currentTitle = projectTitleElement.textContent;
-                        const projectDescription = projectDescElement.textContent;
-                        const prompt = `Given the project description "${projectDescription}" and its current title "${currentTitle}", suggest one very short and catchy new title for this project. Only provide the title, nothing else.`;
-                        const suggestedTitle = await callGeminiAPI(prompt);
-                        generatedTitleOutput.textContent = `Suggested: "${suggestedTitle.trim()}"`;
-                    }
-                });
-            });
         });
     </script>
 </body>
