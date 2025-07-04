@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Jignesh Nayak</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for Inter font */
+        body {
+            font-family: 'Inter', sans-serif;
+            @apply bg-gray-50 text-gray-800; /* Light background, dark text */
+        }
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* CSS to make the image not react to pointer events (including right-click) */
+        .profile-photo {
+            pointer-events: none;
+            user-select: none; /* Prevent selection of the image */
+            -webkit-user-select: none; /* For Safari */
+            -moz-user-select: none; /* For Firefox */
+            -ms-user-select: none; /* For Edge/IE */
+        }
+    </style>
+</head>
+<body>
+    <!-- Main container for the entire page -->
+    <div class="min-h-screen flex flex-col">
+
+        <!-- Navigation Bar -->
+        <nav class="bg-white shadow-sm py-4 px-6 md:px-12 sticky top-0 z-50 rounded-b-lg">
+            <div class="container mx-auto flex justify-between items-center">
+                <!-- Logo/Name -->
+                <a href="index.html#hero" class="text-2xl font-bold text-indigo-700 hover:text-indigo-900 transition-colors duration-300">
+                    Jignesh Nayak
+                </a>
+                <!-- Navigation Links -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html#about" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors duration-300">About</a>
+                    <a href="index.html#creations" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors duration-300">Creations</a>
+                    <a href="index.html#skills" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors duration-300">Skills</a>
+                    <a href="achievements.html" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors duration-300">Achievements</a>
+                    <a href="products.html" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors duration-300">Products</a>
+                    <a href="book-review.html" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors duration-300">Book Reviews</a>
+                    <a href="index.html#contact" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors duration-300">Contact</a>
+                </div>
+                <!-- Mobile Menu Button (Hamburger) -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-indigo-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+                <a href="index.html#about" class="block text-gray-600 hover:text-indigo-700 font-medium py-2 px-4 rounded-md transition-colors duration-300">About</a>
+                <a href="index.html#creations" class="block text-gray-600 hover:text-indigo-700 font-medium py-2 px-4 rounded-md transition-colors duration-300">Creations</a>
+                <a href="index.html#skills" class="block text-gray-600 hover:text-indigo-700 font-medium py-2 px-4 rounded-md transition-colors duration-300">Skills</a>
+                <a href="achievements.html" class="block text-gray-600 hover:text-indigo-700 font-medium py-2 px-4 rounded-md transition-colors duration-300">Achievements</a>
+                <a href="products.html" class="block text-gray-600 hover:text-indigo-700 font-medium py-2 px-4 rounded-md transition-colors duration-300">Products</a>
+                <a href="book-review.html" class="block text-gray-600 hover:text-indigo-700 font-medium py-2 px-4 rounded-md transition-colors duration-300">Book Reviews</a>
+                <a href="index.html#contact" class="block text-gray-600 hover:text-indigo-700 font-medium py-2 px-4 rounded-md transition-colors duration-300">Contact</a>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="hero" class="relative bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20 md:py-32 flex-grow flex items-center justify-center rounded-b-xl shadow-lg">
+            <div class="container mx-auto text-center px-6">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-up">
+                    Hello, I'm Jignesh Nayak
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-90 animate-fade-in-up delay-100">
+                    A Medical Student & Aspiring YouTuber, Building My Roads.
+                </p>
+                <a href="#creations" class="inline-block bg-white text-indigo-700 font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 animate-fade-in-up delay-200">
+                    View My Creations
+                </a>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-16 md:py-24 bg-white rounded-xl shadow-md mx-4 md:mx-auto my-8 max-w-4xl px-6">
+            <div class="container mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">About Me</h2>
+                <div class="flex flex-col md:flex-row items-center md:space-x-8">
+                    <div class="md:w-1/3 mb-8 md:mb-0">
+                        <!-- REPLACE "https://placehold.co/300x300/e0e7ff/4338ca?text=Your+Photo" with YOUR PHOTO URL -->
+                        <img src="https://placehold.co/300x300/e0e7ff/4338ca?text=Your+Photo" alt="Your Photo" class="rounded-full w-48 h-48 md:w-64 md:h-64 mx-auto object-cover shadow-lg border-4 border-indigo-200 profile-photo">
+                    </div>
+                    <div class="md:w-2/3 text-lg text-gray-700 leading-relaxed">
+                        <p id="about-me-text" class="mb-4">
+                            I'm Jignesh Nayak, a 22-year-old medical student currently pursuing my studies in Coimbatore, India. My passion lies deeply in the realm of Medical Research, with a particular inclination towards the intricate field of Neurosurgery.
+                        </p>
+                        <p class="mb-4">
+                            I am actively seeking clinical observership opportunities to gain hands-on experience and broaden my understanding. Furthermore, I'm keen to explore the cutting-edge possibilities where Artificial Intelligence and Machine Learning intersect with surgery and medicine, envisioning a future where technology enhances patient care.
+                        </p>
+                        <p>
+                            Currently, I'm dedicated to vigorously building my skills across medicine, programming, and actively working on impactful research projects. Join me on this exciting journey of discovery and innovation!
+                        </p>
+                        <button id="generate-fun-fact-btn" class="mt-4 bg-purple-600 text-white font-semibold py-2 px-4 rounded-full shadow-md hover:bg-purple-700 transition-colors duration-300">
+                            ✨ Generate a Fun Fact about Me
+                        </button>
+                        <p id="fun-fact-output" class="mt-4 text-sm text-gray-600 italic"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Creations Section (formerly Projects) -->
+        <section id="creations" class="py-16 md:py-24 bg-gray-100 rounded-xl shadow-md mx-4 md:mx-auto my-8 max-w-6xl px-6">
+            <div class="container mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">My Creations</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                    <!-- Project Card 1: AnkiScan -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://placehold.co/400x250/d1d5db/374151?text=AnkiScan+Project" alt="AnkiScan Project" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2" id="project-title-1">AnkiScan</h3>
+                            <p class="text-gray-700 text-sm mb-4" id="project-desc-1">
+                                A project aimed at creating an automated Anki card generator that doesn't rely on AI. It's envisioned as a website where users can upload PDFs or images of specific documents and generate a .csv or .txt file, which can then be imported and studied using Anki.
+                            </p>
+                            <a href="creations.html" class="text-indigo-600 hover:text-indigo-800 font-medium text-sm">Learn More &rarr;</a>
+                            <button class="mt-4 bg-blue-600 text-white font-semibold py-2 px-4 rounded-full shadow-md hover:bg-blue-700 transition-colors duration-300 generate-title-btn" data-project-id="1">
+                                ✨ Suggest a Catchy Title
+                            </button>
+                            <p class="mt-2 text-sm text-gray-600 italic generated-title-output" id="generated-title-1"></p>
+                        </div>
+                    </div>
+                    <!-- Project Card 2: YouTube Channel Vision -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://placehold.co/400x250/d1d5db/374151?text=YouTube+Channel+Concept" alt="Project 2" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2" id="project-title-2">YouTube Channel Vision</h3>
+                            <p class="text-gray-700 text-sm mb-4" id="project-desc-2">
+                                  Document the whole UG journey i guess. Since i live in a hostel this seems a bit far fetched but will figure something out.
+                            </p>
+                            <a href="https://youtube.com/@gr3y_mask?si=Ns5y3HfZqgZAW9Om" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 font-medium text-sm">Watch Now &rarr;</a>
+                            <button class="mt-4 bg-blue-600 text-white font-semibold py-2 px-4 rounded-full shadow-md hover:bg-blue-700 transition-colors duration-300 generate-title-btn" data-project-id="2">
+                                ✨ Suggest a Catchy Title
+                            </button>
+                            <p class="mt-2 text-sm text-gray-600 italic generated-title-output" id="generated-title-2"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="creations.html" class="inline-block bg-indigo-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-700 transform hover:scale-105 transition-all duration-300">
+                        See Other Creations &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+                <!-- Skills Section -->
+        <section id="skills" class="py-16 md:py-24 bg-white rounded-xl shadow-md mx-4 md:mx-auto my-8 max-w-4xl px-6">
+            <div class="container mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">My Skills</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Medical Skills -->
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-6">Medical Studies</h3>
+                        <ul class="space-y-4 text-gray-700 text-lg">
+                            <li class="flex items-center">
+                                <span class="text-indigo-500 mr-3">&#10003;</span>
+                                Anatomy
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-indigo-500 mr-3">&#10003;</span>
+                                Physiology
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-indigo-500 mr-3">&#10003;</span>
+                                Biochemistry
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-indigo-500 mr-3">&#10003;</span>
+                                Microbiology
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-indigo-500 mr-3">&#10003;</span>
+                                Pharmacology
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-indigo-500 mr-3">&#10003;</span>
+                                Pathology
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-indigo-500 mr-3">&#10003;</span>
+                                Anki Card Creation & Optimization
+                            </li>
+                            <!-- Add more medical skills -->
+                        </ul>
+                    </div>
+                    <!-- General/Tech Skills -->
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-6">General & Tech Skills</h3>
+                        <ul class="space-y-4 text-gray-700 text-lg">
+                            <li class="flex items-center">
+                                <span class="text-indigo-500 mr-3">&#10003;</span>
+                                YouTube and video editing
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-indigo-500 mr-3">&#10003;</span>
+                                Problem Solving
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-indigo-500 mr-3">&#10003;</span>
+                                Basic HTML (Learning)
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-indigo-500 mr-3">&#10003;</span>
+                                Research & Information Synthesis
+                            </li>
+                            <!-- Add more general skills -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 md:py-24 bg-gradient-to-r from-purple-700 to-indigo-600 text-white rounded-t-xl shadow-lg mt-8">
+            <div class="container mx-auto text-center px-6">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8">Get in Touch</h2>
+                <p class="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
+                    Have a question, a collaboration idea, or just want to say hello? Feel free to reach out!
+                </p>
+                <div class="space-y-4 md:space-y-0 md:space-x-8 flex flex-col md:flex-row justify-center items-center">
+                    <a href="mailto:nayakjn4539@gmail.com" class="bg-white text-indigo-700 font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                        Email Me
+                    </a>
+                    <a href="https://youtube.com/@gr3y_mask?si=Ns5y3HfZqgZAW9Om" target="_blank" rel="noopener noreferrer" class="bg-white text-red-600 font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.201 16.533s-.34-.962-.486-1.379c-.146-.417-.91-.734-1.81-.79-1.011-.067-3.773-.067-3.773-.067h-.006s-2.762 0-3.773.067c-.9.056-1.664.373-1.81.79-.146.417-.486 1.379-.486 1.379s-.34 1.011-.34 2.022v.22c0 1.011.34 2.022.34 2.022s.34.962.486 1.379c.146.417.91.734 1.81.79 1.011.067 3.773.067 3.773.067h.006s2.762 0 3.773-.067c.9-.056 1.664-.373 1.81-.79.146-.417.486-1.379.486-1.379s.34-1.011.34-2.022v-.22c0-1.011-.34-2.022-.34-2.022zm-1.884-3.087l-4.526 2.618v-5.236l4.526 2.618z"/></svg>
+                        YouTube
+                    </a>
+                    <a href="https://instagram.com/yourinstagram" target="_blank" rel="noopener noreferrer" class="bg-white text-pink-600 font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.07 1.645.07 4.85s-.012 3.584-.07 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.149-4.771-1.691-4.919-4.919-.058-1.265-.07-1.644-.07-4.85s.012-3.584.07-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.645-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.668.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.073 4.948.073s3.668-.014 4.947-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        Instagram
+                    </a>
+                    <a href="https://twitter.com/yourtwitter" target="_blank" rel="noopener noreferrer" class="bg-white text-blue-400 font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                        Twitter
+                    </a>
+                     <a href="https://linkedin.com/in/yourlinkedin" target="_blank" rel="noopener noreferrer" class="bg-white text-blue-700 font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-gray-300 py-8 text-center rounded-t-lg shadow-inner">
+            <div class="container mx-auto px-6">
+                <p>&copy; 2025 Jignesh Nayak. All rights reserved. Built with determination.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- JavaScript for Mobile Menu Toggle and Gemini API Calls -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when a link is clicked
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // --- Gemini API Integration ---
+
+            // Function to call Gemini API
+            async function callGeminiAPI(prompt) {
+                let chatHistory = [];
+                chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+                const payload = { contents: chatHistory };
+                const apiKey = ""; // Canvas will automatically provide the API key at runtime
+
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                    const result = await response.json();
+
+                    if (result.candidates && result.candidates.length > 0 &&
+                        result.candidates[0].content && result.candidates[0].content.parts &&
+                        result.candidates[0].content.parts.length > 0) {
+                        return result.candidates[0].content.parts[0].text;
+                    } else {
+                        console.error("Gemini API response structure unexpected:", result);
+                        return "Error: Could not generate content.";
+                    }
+                } catch (error) {
+                    console.error("Error calling Gemini API:", error);
+                    return "Error: Failed to connect to AI.";
+                }
+            }
+
+            // 1. Generate Fun Fact about Me
+            const generateFunFactBtn = document.getElementById('generate-fun-fact-btn');
+            const aboutMeText = document.getElementById('about-me-text');
+            const funFactOutput = document.getElementById('fun-fact-output');
+
+            if (generateFunFactBtn && aboutMeText && funFactOutput) {
+                generateFunFactBtn.addEventListener('click', async () => {
+                    funFactOutput.textContent = 'Generating fun fact...';
+                    // Updated prompt to reflect the new About Me text without asterisks
+                    const prompt = `Based on the following text about Jignesh Nayak, a 22-year-old medical student at Coimbatore, India, interested in Medical Research and Neurosurgery, seeking clinical observership opportunities, and exploring AI/ML with surgery and medicine, who is building skills in Medicine, Programming, and Research projects, generate one short, interesting, and fun fact. Do not start with "A fun fact is".\n\n"${aboutMeText.textContent}"`;
+                    const fact = await callGeminiAPI(prompt);
+                    funFactOutput.textContent = fact;
+                });
+            }
+
+            // 2. Suggest Catchy Project Title
+            const generateTitleButtons = document.querySelectorAll('.generate-title-btn');
+
+            generateTitleButtons.forEach(button => {
+                button.addEventListener('click', async (event) => {
+                    const projectId = event.target.dataset.projectId;
+                    // Note: project-desc-1 (AnkiScan) is now on creations.html, so this will only work for existing projects on index.html
+                    const projectDescElement = document.getElementById(`project-desc-${projectId}`);
+                    const projectTitleElement = document.getElementById(`project-title-${projectId}`);
+                    const generatedTitleOutput = document.getElementById(`generated-title-${projectId}`);
+
+                    if (projectDescElement && projectTitleElement && generatedTitleOutput) {
+                        generatedTitleOutput.textContent = 'Suggesting title...';
+                        const currentTitle = projectTitleElement.textContent;
+                        const projectDescription = projectDescElement.textContent;
+                        const prompt = `Given the project description "${projectDescription}" and its current title "${currentTitle}", suggest one very short and catchy new title for this project. Only provide the title, nothing else.`;
+                        const suggestedTitle = await callGeminiAPI(prompt);
+                        generatedTitleOutput.textContent = `Suggested: "${suggestedTitle.trim()}"`;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

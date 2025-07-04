@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jignesh Nayak - Book Reviews</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            @apply bg-gray-50 text-gray-800;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen flex flex-col">
+
+        <!-- Navigation Bar (Consistent with index.html) -->
+        <nav class="bg-white shadow-sm py-4 px-6 md:px-12 sticky top-0 z-50 rounded-b-lg">
+            <div class="container mx-auto flex justify-between items-center">
+                <a href="index.html#hero" class="text-2xl font-bold text-indigo-700 hover:text-indigo-900 transition-colors duration-300">
+                    Jignesh Nayak
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html#about" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors duration-300">About</a>
+                    <a href="index.html#creations" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors duration-300">Creations</a>
+                    <a href="index.html#skills" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors duration-300">Skills</a>
+                    <a href="achievements.html" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors duration-300">Achievements</a>
+                    <a href="products.html" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors duration-300">Products</a>
+                    <a href="creations.html" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors duration-300">Creations</a>
+                    <a href="book-review.html" class="text-indigo-700 font-medium transition-colors duration-300">Book Reviews</a>
+                    <a href="index.html#contact" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors duration-300">Contact</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-indigo-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+                <a href="index.html#about" class="block text-gray-600 hover:text-indigo-700 font-medium py-2 px-4 rounded-md transition-colors duration-300">About</a>
+                <a href="index.html#creations" class="block text-gray-600 hover:text-indigo-700 font-medium py-2 px-4 rounded-md transition-colors duration-300">Creations</a>
+                <a href="index.html#skills" class="block text-gray-600 hover:text-indigo-700 font-medium py-2 px-4 rounded-md transition-colors duration-300">Skills</a>
+                <a href="achievements.html" class="block text-gray-600 hover:text-indigo-700 font-medium py-2 px-4 rounded-md transition-colors duration-300">Achievements</a>
+                <a href="products.html" class="block text-gray-600 hover:text-indigo-700 font-medium py-2 px-4 rounded-md transition-colors duration-300">Products</a>
+                <a href="creations.html" class="block text-gray-600 hover:text-indigo-700 font-medium py-2 px-4 rounded-md transition-colors duration-300">Creations</a>
+                <a href="book-review.html" class="block text-indigo-700 font-medium py-2 px-4 rounded-md transition-colors duration-300">Book Reviews</a>
+                <a href="index.html#contact" class="block text-gray-600 hover:text-indigo-700 font-medium py-2 px-4 rounded-md transition-colors duration-300">Contact</a>
+            </div>
+        </nav>
+
+        <!-- Page Specific Hero Section -->
+        <section class="relative bg-gradient-to-r from-orange-600 to-red-700 text-white py-20 md:py-24 flex-grow flex items-center justify-center rounded-b-xl shadow-lg">
+            <div class="container mx-auto text-center px-6">
+                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
+                    My Book Reviews
+                </h1>
+                <p class="text-lg md:text-xl opacity-90">
+                    Insights and summaries from books that have shaped my journey.
+                </p>
+            </div>
+        </section>
+                <!-- Book Review Content Section -->
+        <section class="py-16 md:py-24 bg-white rounded-xl shadow-md mx-4 md:mx-auto my-8 max-w-4xl px-6">
+            <div class="container mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">Featured Reviews</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-lg text-gray-700 leading-relaxed">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200">
+                        <img src="https://placehold.co/200x300/e0e7ff/4338ca?text=Book+Cover" alt="Book Cover 1" class="float-left mr-4 mb-4 rounded-md shadow">
+                        <h3 class="text-xl font-semibold text-red-700 mb-2">Book Title 1: A Deep Dive</h3>
+                        <p class="mb-4">
+                            A compelling summary of "Book Title 1," highlighting its key takeaways and how it impacted my perspective on [relevant field].
+                        </p>
+                        <a href="https://amazon.com/your-book-affiliate-link-1" target="_blank" rel="noopener noreferrer" class="inline-block bg-red-600 text-white font-semibold py-2 px-4 rounded-full shadow-md hover:bg-red-700 transition-colors duration-300">
+                            Buy on Amazon &rarr;
+                        </a>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200">
+                        <img src="https://placehold.co/200x300/e0e7ff/4338ca?text=Book+Cover" alt="Book Cover 2" class="float-left mr-4 mb-4 rounded-md shadow">
+                        <h3 class="text-xl font-semibold text-red-700 mb-2">Book Title 2: My Takeaways</h3>
+                        <p class="mb-4">
+                            My personal review of "Book Title 2," focusing on its practical applications for [your field/studies] and why I recommend it.
+                        </p>
+                        <a href="https://amazon.com/your-book-affiliate-link-2" target="_blank" rel="noopener noreferrer" class="inline-block bg-red-600 text-white font-semibold py-2 px-4 rounded-full shadow-md hover:bg-red-700 transition-colors duration-300">
+                            Buy on Amazon &rarr;
+                        </a>
+                    </div>
+                    <p class="text-center text-gray-600 italic mt-12 col-span-full">
+                        Stay tuned for more insightful book reviews and summaries!
+                        (Remember to replace placeholder links with your actual affiliate links.)
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer (Consistent with index.html) -->
+        <footer class="bg-gray-800 text-gray-300 py-8 text-center rounded-t-lg shadow-inner">
+            <div class="container mx-auto px-6">
+                <p>&copy; 2025 Jignesh Nayak. All rights reserved. Built with determination.</p>
+            </div>
+        </footer>
+
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

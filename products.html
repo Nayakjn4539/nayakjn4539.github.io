@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jignesh Nayak - Products</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            @apply bg-gray-50 text-gray-800;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen flex flex-col">
+
+        <!-- Navigation Bar (Consistent with index.html) -->
+        <nav class="bg-white shadow-sm py-4 px-6 md:px-12 sticky top-0 z-50 rounded-b-lg">
+            <div class="container mx-auto flex justify-between items-center">
+                <a href="index.html#hero" class="text-2xl font-bold text-indigo-700 hover:text-indigo-900 transition-colors duration-300">
+                    Jignesh Nayak
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html#about" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors duration-300">About</a>
+                    <a href="index.html#creations" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors duration-300">Creations</a>
+                    <a href="index.html#skills" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors duration-300">Skills</a>
+                    <a href="achievements.html" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors duration-300">Achievements</a>
+                    <a href="products.html" class="text-indigo-700 font-medium transition-colors duration-300">Products</a>
+                    <a href="creations.html" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors duration-300">Creations</a>
+                    <a href="book-review.html" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors duration-300">Book Reviews</a>
+                    <a href="index.html#contact" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors duration-300">Contact</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-indigo-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+                <a href="index.html#about" class="block text-gray-600 hover:text-indigo-700 font-medium py-2 px-4 rounded-md transition-colors duration-300">About</a>
+                <a href="index.html#creations" class="block text-gray-600 hover:text-indigo-700 font-medium py-2 px-4 rounded-md transition-colors duration-300">Creations</a>
+                <a href="index.html#skills" class="block text-gray-600 hover:text-indigo-700 font-medium py-2 px-4 rounded-md transition-colors duration-300">Skills</a>
+                <a href="achievements.html" class="block text-gray-600 hover:text-indigo-700 font-medium py-2 px-4 rounded-md transition-colors duration-300">Achievements</a>
+                <a href="products.html" class="block text-indigo-700 font-medium py-2 px-4 rounded-md transition-colors duration-300">Products</a>
+                <a href="creations.html" class="block text-gray-600 hover:text-indigo-700 font-medium py-2 px-4 rounded-md transition-colors duration-300">Creations</a>
+                <a href="book-review.html" class="block text-gray-600 hover:text-indigo-700 font-medium py-2 px-4 rounded-md transition-colors duration-300">Book Reviews</a>
+                <a href="index.html#contact" class="block text-gray-600 hover:text-indigo-700 font-medium py-2 px-4 rounded-md transition-colors duration-300">Contact</a>
+            </div>
+        </nav>
+
+        <!-- Page Specific Hero Section -->
+        <section class="relative bg-gradient-to-r from-green-600 to-teal-700 text-white py-20 md:py-24 flex-grow flex items-center justify-center rounded-b-xl shadow-lg">
+            <div class="container mx-auto text-center px-6">
+                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
+                    My Study Content & Resources
+                </h1>
+                <p class="text-lg md:text-xl opacity-90">
+                    High-quality medical study materials designed to help you excel.
+                </p>
+            </div>
+        </section>
+                <!-- Products Content Section -->
+        <section class="py-16 md:py-24 bg-white rounded-xl shadow-md mx-4 md:mx-auto my-8 max-w-4xl px-6">
+            <div class="container mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">Available Products</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-lg text-gray-700 leading-relaxed">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200">
+                        <h3 class="text-xl font-semibold text-teal-700 mb-2">Microbiology Anki Deck (Apurba Sastry Edition)</h3>
+                        <p class="mb-4">Comprehensive Anki cards covering key topics from Apurba Sastry's Microbiology, designed for efficient revision.</p>
+                        <a href="https://gumroad.com/your-anki-product" target="_blank" rel="noopener noreferrer" class="inline-block bg-teal-600 text-white font-semibold py-2 px-4 rounded-full shadow-md hover:bg-teal-700 transition-colors duration-300">
+                            View on Gumroad &rarr;
+                        </a>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200">
+                        <h3 class="text-xl font-semibold text-teal-700 mb-2">Pharmacology Revision Notes (Concise)</h3>
+                        <p class="mb-4">My personal, concise revision notes for Pharmacology, perfect for quick review before exams.</p>
+                        <a href="https://shopify.com/your-notes-product" target="_blank" rel="noopener noreferrer" class="inline-block bg-teal-600 text-white font-semibold py-2 px-4 rounded-full shadow-md hover:bg-teal-700 transition-colors duration-300">
+                            View on Shopify &rarr;
+                        </a>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200 col-span-full">
+                        <h3 class="text-xl font-semibold text-teal-700 mb-2">Pathology Case Studies Collection</h3>
+                        <p class="mb-4">A collection of challenging Pathology case studies with detailed explanations, ideal for clinical correlation.</p>
+                        <a href="https://gumroad.com/your-pathology-product" target="_blank" rel="noopener noreferrer" class="inline-block bg-teal-600 text-white font-semibold py-2 px-4 rounded-full shadow-md hover:bg-teal-700 transition-colors duration-300">
+                            View on Gumroad &rarr;
+                        </a>
+                    </div>
+                    <p class="text-center text-gray-600 italic mt-12 col-span-full">
+                        More valuable study content and resources will be added here soon! Stay tuned.
+                        (Remember to replace the placeholder links with your actual Gumroad/Shopify product links.)
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer (Consistent with index.html) -->
+        <footer class="bg-gray-800 text-gray-300 py-8 text-center rounded-t-lg shadow-inner">
+            <div class="container mx-auto px-6">
+                <p>&copy; 2025 Jignesh Nayak. All rights reserved. Built with determination.</p>
+            </div>
+        </footer>
+
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
