@@ -102,11 +102,7 @@
                         <p>
                             Currently, I'm dedicated to vigorously building my skills across medicine, programming, and actively working on impactful research projects. Join me on this exciting journey of discovery and innovation!
                         </p>
-                        <button id="generate-fun-fact-btn" class="mt-4 bg-purple-600 text-white font-semibold py-2 px-4 rounded-full shadow-md hover:bg-purple-700 transition-colors duration-300">
-                            ✨ Generate a Fun Fact about Me
-                        </button>
-                        <p id="fun-fact-output" class="mt-4 text-sm text-gray-600 italic"></p>
-                    </div>
+                        </div>
                 </div>
             </div>
         </section>
@@ -270,55 +266,6 @@
                     mobileMenu.classList.add('hidden');
                 });
             });
-
-            // --- Gemini API Integration ---
-
-            // Function to call Gemini API
-            async function callGeminiAPI(prompt) {
-                let chatHistory = [];
-                chatHistory.push({ role: "user", parts: [{ text: prompt }] });
-                const payload = { contents: chatHistory };
-                const apiKey = ""; // Canvas will automatically provide the API key at runtime
-
-                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-
-                try {
-                    const response = await fetch(apiUrl, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload)
-                    });
-                    const result = await response.json();
-
-                    if (result.candidates && result.candidates.length > 0 &&
-                        result.candidates[0].content && result.candidates[0].content.parts &&
-                        result.candidates[0].content.parts.length > 0) {
-                        return result.candidates[0].content.parts[0].text;
-                    } else {
-                        console.error("Gemini API response structure unexpected:", result);
-                        return "Error: Could not generate content.";
-                    }
-                } catch (error) {
-                    console.error("Error calling Gemini API:", error);
-                    return "Error: Failed to connect to AI.";
-                }
-            }
-
-            // 1. Generate Fun Fact about Me
-            const generateFunFactBtn = document.getElementById('generate-fun-fact-btn');
-            const aboutMeText = document.getElementById('about-me-text');
-            const funFactOutput = document.getElementById('fun-fact-output');
-
-            if (generateFunFactBtn && aboutMeText && funFactOutput) {
-                generateFunFactBtn.addEventListener('click', async () => {
-                    funFactOutput.textContent = 'Generating fun fact...';
-                    // Updated prompt to reflect the new About Me text without asterisks
-                    const prompt = `Based on the following text about Jignesh Nayak, a 22-year-old medical student at Coimbatore, India, interested in Medical Research and Neurosurgery, seeking clinical observership opportunities, and exploring AI/ML with surgery and medicine, who is building skills in Medicine, Programming, and Research projects, generate one short, interesting, and fun fact. Do not start with "A fun fact is".\n\n"${aboutMeText.textContent}"`;
-                    const fact = await callGeminiAPI(prompt);
-                    funFactOutput.textContent = fact;
-                });
-            }
-        });
-    </script>
+       </script>
 </body>
 </html>
